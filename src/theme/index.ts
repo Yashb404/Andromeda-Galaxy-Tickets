@@ -23,7 +23,11 @@ export const ThemeStorageManager = createLocalStorageManager("andromeda-marketpl
 export default extendTheme({
   config,
   styles: {
-    global: {
+    global: (props: any) => ({
+      body: {
+        bg: props.colorMode === 'dark' ? '#090a13' : '#f7fafc',
+        color: props.colorMode === 'dark' ? 'white' : 'gray.800',
+      },
       "*": {
         scrollbarWidth: "6px",
         scrollbarColor: "#7F56D9 transparent",
@@ -41,7 +45,7 @@ export default extendTheme({
         bg: "#7F56D9",
         borderRadius: "1.5rem",
       },
-    },
+    }),
   },
   shadows,
   fonts: {
@@ -196,7 +200,19 @@ export default extendTheme({
       800: "#0040C1",
       900: "#00359E",
     },
-    system: theme.colors.gray
+    system: theme.colors.gray,
+    background: {
+      light: '#f7fafc',
+      dark: '#090a13',
+    },
+    surface: {
+      light: '#fff',
+      dark: '#10101a',
+    },
+    text: {
+      light: '#1a202c',
+      dark: '#fff',
+    },
   },
   textStyles: {
     h1: {

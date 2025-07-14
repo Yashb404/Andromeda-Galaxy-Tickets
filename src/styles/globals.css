@@ -4,6 +4,14 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background-color: #f7fafc;
+}
+body.chakra-ui-dark {
+  background-color: #090a13;
+  background-image: url('/public/starfield.svg');
+  background-size: cover;
+  background-repeat: repeat;
+  background-attachment: fixed;
 }
 
 a {

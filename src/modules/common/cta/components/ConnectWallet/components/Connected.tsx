@@ -20,6 +20,7 @@ import {
   PopoverContent,
   PopoverTrigger,
   Text,
+  useColorModeValue,
 } from "@chakra-ui/react";
 import React, { FC } from "react";
 
