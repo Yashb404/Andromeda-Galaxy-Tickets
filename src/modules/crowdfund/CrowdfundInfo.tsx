@@ -57,10 +57,10 @@ const CrowdfundInfo: FC<CrowdfundInfoProps> = (props) => {
     <Box w="full" data-testid="crowdfund-info">
       <HStack justify="space-between" data-testid="crowdfund-header">
         <Box>
-          <Text fontSize="2xl" fontWeight="bold" data-testid="collection-name">
+          <Text fontSize="3xl" fontWeight="bold" data-testid="collection-name">
             {collectionName}
           </Text>
-          <Text fontSize="xs" fontWeight="thin" fontStyle="light">
+          <Text fontSize="md" fontWeight="medium" fontStyle="light">
             Collection: <b>{collectionName}</b>
           </Text>
         </Box>
@@ -95,14 +95,14 @@ const CrowdfundInfo: FC<CrowdfundInfoProps> = (props) => {
           p={2}
           display="inline-flex"
           alignItems="center"
-          fontSize={"lg"}
+          fontSize={"2xl"}
           fontWeight={"bold"}
           data-testid="total-amount-sold"
         >
           {total_amount_sold} {denom}
         </Text>
 
-        <Text display="inline-flex" alignItems="center" fontSize={"sm"} data-testid="pledged-amount">
+        <Text display="inline-flex" alignItems="center" fontSize={"lg"} data-testid="pledged-amount">
           pledged of {min_tokens_sold * price} {denom} goal
         </Text>
         <Progress colorScheme="green" size="sm" mt="3" value={progress} borderRadius="md" data-testid="progress-bar" />
