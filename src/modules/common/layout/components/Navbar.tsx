@@ -21,8 +21,8 @@ const Navbar: FC<NavbarProps> = (props) => {
         mx="auto"
         gap="4"
       >
-        <Link href={LINKS.home()} passHref>
-          <Text as="a" fontSize="lg" fontWeight="bold">
+        <Link href={LINKS.home()}>
+          <Text fontSize="lg" fontWeight="bold">
             {config.name}
           </Text>
         </Link>
