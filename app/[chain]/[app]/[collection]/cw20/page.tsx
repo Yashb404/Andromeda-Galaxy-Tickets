@@ -5,14 +5,12 @@ import { notFound } from 'next/navigation'
 import React, { FC } from "react"
 import ExchangePage from "@/modules/exchange/ExchangePage"
 
-interface Props {
-    params: {
-        collection: string;
-    }
+interface PageProps {
+    params: { collection: string; chain: string; app: string };
 }
 
-const Page: FC<Props> = (props) => {
-    const { params: { collection: collectionId } } = props;
+const Page: FC<PageProps> = ({ params }) => {
+    const { collection: collectionId } = params;
     const { getCollection } = useAppUtils();
     const collection = getCollection(collectionId) as IExchangeCollection;
     const { data, error } = useMiniBaseAdoQuery({
