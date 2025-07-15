@@ -1,5 +1,6 @@
 import { LINKS } from "@/utils/links";
-import { Box, Button, Flex, GridItem, SimpleGrid, Text, keyframes } from "@chakra-ui/react";
+import { Box, Button, Flex, GridItem, SimpleGrid, Text } from "@chakra-ui/react";
+import { keyframes } from "@emotion/react";
 import Link from "next/link";
 import React, { FC } from "react";
 import CollectionRowToken from "./CollectionRowToken";

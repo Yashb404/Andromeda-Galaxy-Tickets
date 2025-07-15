@@ -1,5 +1,6 @@
 import { useAppUtils } from "@/lib/app/hooks";
-import { Box, Text, Button, VStack, Flex, keyframes } from "@chakra-ui/react";
+import { Box, Text, Button, VStack, Flex } from "@chakra-ui/react";
+import { keyframes } from "@emotion/react";
 import React, { FC, useMemo } from "react";
 import CollectionRow from "./CollectionRow";
 import Link from "next/link";
