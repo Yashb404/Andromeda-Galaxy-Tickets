@@ -4,9 +4,9 @@ import { HomePage } from "@/modules/home";
 
 
 interface Props {
-    params: {
+    params: Promise<{
         chain: string;
-    }
+    }>
 }
 
 const Page = async (props: Props) => {

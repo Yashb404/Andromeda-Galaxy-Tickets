@@ -5,13 +5,14 @@ import Cw721TokenPage from "@/modules/cw721/token";
 import { notFound } from 'next/navigation';
 
 type Props = {
-  params: {
+  params: Promise<{
     collection: string;
     token: string;
-  };
+  }>;
 };
 
-const Page = async ({ params }: Props) => {
+const Page = async (props: Props) => {
+  const params = await props.params;
   const { collection: collectionId, token: _tokenId } = params;
   const tokenId = decodeURI(_tokenId);
   const { getCollection } = useAppUtils();

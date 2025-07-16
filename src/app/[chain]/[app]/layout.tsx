@@ -6,15 +6,14 @@ import { Layout } from "@/modules/common/layout";
 
 interface Props {
     children?: ReactNode;
-    params: {
+    params: Promise<{
         app: string;
         chain: string;
-    };
+    }>;
 }
 
-export async function generateMetadata(
-    { params }: Props,
-): Promise<Metadata> {
+export async function generateMetadata(props: Props): Promise<Metadata> {
+    const params = await props.params;
     const client = await getClient(params.chain);
     const config = await getConfig(client, params.app);
     return {

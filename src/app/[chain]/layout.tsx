@@ -12,9 +12,9 @@ export const metadata: Metadata = {
 
 interface Props {
     children?: ReactNode;
-    params: {
+    params: Promise<{
         chain: string;
-    }
+    }>
 }
 
 const RootLayout = async (props: Props) => {
