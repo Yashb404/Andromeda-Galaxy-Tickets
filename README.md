@@ -47,7 +47,7 @@ The vision of Galaxy Tour Tickets is to create a decentralized ecosystem where t
 ### Deployment
 
 - **Vercel**: Hosting platform optimized for Next.js applications.
-- https://andromeda-galaxy-tickets-ylo2.vercel.app/
+- [https://andromeda-galaxy-tickets-ylo2.vercel.app/](https://andromeda-galaxy-tickets-ylo2.vercel.app/)
 ## Installation Guide
 
 ### Prerequisites
