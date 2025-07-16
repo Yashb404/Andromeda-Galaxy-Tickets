@@ -1,10 +1,21 @@
 import * as React from "react"
-import * as AlertDialogPrimitive from "@radix-ui/react-alert-dialog"
+import * as AlertDialogPrimitive from "@radix-ui/react-alert-dialog";
+import clsx from "clsx";
 
-import { cn } from "@/lib/utils"
-import { buttonVariants } from "@/components/ui/button"
+const cn = (...args: any[]) => clsx(...args);
 
-const AlertDialog = AlertDialogPrimitive.Root
+const buttonVariants = (variant: string) => {
+  switch (variant) {
+    case "destructive":
+      return "bg-red-600 text-white hover:bg-red-700";
+    case "outline":
+      return "border border-gray-300 text-gray-700 hover:bg-gray-100";
+    default:
+      return "bg-blue-600 text-white hover:bg-blue-700";
+  }
+};
+
+const AlertDialog = AlertDialogPrimitive.Root;
 
 const AlertDialogTrigger = AlertDialogPrimitive.Trigger
 
@@ -102,7 +113,7 @@ const AlertDialogAction = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <AlertDialogPrimitive.Action
     ref={ref}
-    className={cn(buttonVariants(), className)}
+    className={cn(buttonVariants("default"), className)}
     {...props}
   />
 ))
@@ -115,7 +126,7 @@ const AlertDialogCancel = React.forwardRef<
   <AlertDialogPrimitive.Cancel
     ref={ref}
     className={cn(
-      buttonVariants({ variant: "outline" }),
+      buttonVariants("outline"),
       "mt-2 sm:mt-0",
       className
     )}

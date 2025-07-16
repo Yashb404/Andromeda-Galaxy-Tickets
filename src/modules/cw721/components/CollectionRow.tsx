@@ -49,9 +49,8 @@ const Cw721CollectionRow: FC<{ collectionId: string }> = ({ collectionId }) => {
             <Text fontSize="md" color="gray.300" flexGrow={1}>
               Discover unique digital assets from the Andromeda ecosystem.
             </Text>
-            <Link href={LINKS.collection(collectionId)} passHref>
+            <Link href={LINKS.collection(collectionId)}>
               <Button
-                as="a"
                 w="full"
                 size="lg"
                 bgGradient="linear(to-r, #6E45E2, #88D3CE)"
